@@ -6,7 +6,7 @@ import Complements from "@/sukhacomponents/Complements";
 import Technical from "@/sukhacomponents/Technical";
 import Mask from "../Mask"
 
-export default function index() {
+export default function Index() {
   const phrase =
     "Nos enfocamos en ofrecer a nuestros clientes una experiencia única, asegurándonos de que cada detalle esté cuidado para que su evento sea un éxito asegurado.";
   const description = useRef(null);

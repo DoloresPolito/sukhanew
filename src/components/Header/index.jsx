@@ -12,7 +12,7 @@ import { Link } from "react-scroll";
 import logo from "../../../public/images/logo.png";
 import Image from "next/image";
 
-export default function index() {
+export default function Index() {
   const header = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
