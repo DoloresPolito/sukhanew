@@ -10,7 +10,7 @@
     
     .sliderContainer{
       position: absolute;
-      top: calc(100vh - 350px);
+      top: calc(100vh - 240px);
     }
     
     .slider{
@@ -21,10 +21,11 @@
     .slider p{
       position: relative;
       margin: 0px;
-      color: white;
-      font-size: 230px;
+      color: #e0dcc7;
+      font-size: 240px;
       font-weight: 500;
       padding-right: 50px;
+      font-family: var(--font-barlowcondensed);
     }
     
     .slider p:nth-of-type(2){
@@ -43,6 +44,7 @@
       p{
         margin: 0px;
         margin-bottom: 10px;
+   
       }
       svg{
         transform: scale(2);

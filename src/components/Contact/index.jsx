@@ -4,6 +4,7 @@ import Rounded from '../../common/RoundedButton';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
 import Magnetic from '../../common/Magnetic';
+import Contact from "../../sukhacomponents/Contact"
 
 export default function index() {
     const container = useRef(null);
@@ -15,9 +16,11 @@ export default function index() {
     const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
     return (
-        <motion.div style={{y}} ref={container} className={styles.contact}>
+        <motion.div style={{y}} ref={container} className={styles.contact} id="contacto">
             <div className={styles.body}>
-                <div className={styles.title}>
+
+                <Contact/>
+                {/* <div className={styles.title}>
                     <span>
                         <div className={styles.imageContainer}>
                             <Image 
@@ -74,7 +77,7 @@ export default function index() {
                             <p>Linkedin</p>
                         </Magnetic>
                     </div>
-                </div>
+                </div> */}
             </div>
         </motion.div>
     )

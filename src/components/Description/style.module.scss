@@ -1,16 +1,35 @@
 .description{
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-top: 200px;
+    // padding-left: 200px;
+    // padding-right: 200px;
+    margin-top: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    
     .body{
         max-width: 1400px;
         display: flex;
+        flex-direction: column;
         gap: 50px;
         position: relative;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+        margin-top: 0px;
+ 
         p{
             margin: 0px;
+            font-family: var(--font-barlowsemicondensed);
+            color: #6a6f58;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 30px;
+            max-width: 1000px;
+            text-align: center;
+    
+  
+      
             &:nth-of-type(1){
                 font-size: 36px;
                 gap: 8px;
@@ -25,9 +44,10 @@
                 }
             }
             &:nth-of-type(2){
-                font-size: 18px;
+                font-size: 22px;
                 width: 80%;
                 font-weight: 300;
+   
             }
         }
         .button{
@@ -43,12 +63,16 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+ 
             p{
                 margin: 0px;
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 300;
                 position: relative;
                 z-index: 1;
+                align-self: center;
+                background-color: red !important;
+
             }
         }
     }

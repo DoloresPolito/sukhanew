@@ -1,10 +1,10 @@
 .menu{
     height: 100vh;
-    background-color: rgb(41, 41, 41);
+    background-color: #6a6f58;
     position: fixed;
     right: 0;
     top: 0;
-    color: white;
+    color: #e0dcc7;
     z-index: 3;
     .body{
         box-sizing: border-box;
@@ -22,17 +22,21 @@
             margin-top: 80px;
 
             .header{
-                color: rgb(153, 153, 153);
-                border-bottom: 1px solid rgb(153, 153, 153);
+                color:   #e0dcc7;
+                border-bottom: 1px solid  #e0dcc7;
                 text-transform: uppercase;
                 font-size: 11px;
                 margin-bottom: 40px;
             }
 
             a{
+                font-size: 20px;
                 text-decoration: none;
-                color: white;
+                color:  #e0dcc7;
                 font-weight: 300;
+                font-weight: 500;
+                letter-spacing: 1px;
+                font-family: var(--font-barlowcondensed);
             }
             
         }

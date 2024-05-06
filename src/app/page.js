@@ -8,6 +8,7 @@ import Projects from '../components/Projects';
 import Description from '../components/Description';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
+import Footer from "../sukhacomponents/Footer"
 
 export default function Home() {
 
@@ -35,9 +36,10 @@ export default function Home() {
       </AnimatePresence>
       <Landing />
       <Description />
-      <Projects />
+      {/* <Projects /> */}
       <SlidingImages />
       <Contact />
+      <Footer/>
     </main>
   )
 }

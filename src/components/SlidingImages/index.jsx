@@ -6,38 +6,38 @@ import Image from 'next/image';
 const slider1 = [
     {
         color: "#e3e5e7",
-        src: "c2.jpg"
+        src: "j.jpg"
     },
     {
         color: "#d6d7dc",
-        src: "decimal.jpg"
+        src: "a.jpg"
     },
     {
         color: "#e3e3e3",
-        src: "funny.jpg"
+        src: "h.jpg"
     },
     {
         color: "#21242b",
-        src: "google.jpg"
+        src: "d.jpg"
     }
 ]
 
 const slider2 = [
     {
         color: "#d4e3ec",
-        src: "maven.jpg"
+        src: "e.jpg"
     },
     {
         color: "#e5e0e1",
-        src: "panda.jpg"
+        src: "b.jpg"
     },
     {
         color: "#d7d4cf",
-        src: "powell.jpg"
+        src: "i.jpg"
     },
     {
         color: "#e1dad6",
-        src: "wix.jpg"
+        src: "c.jpg"
     }
 ]
 
@@ -58,7 +58,7 @@ export default function index() {
             <motion.div style={{x: x1}} className={styles.slider}>
                     {
                         slider1.map( (project, index) => {
-                            return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
+                            return <div key={index} className={styles.project}  >
                                 <div className={styles.imageContainer}>
                                     <Image 
                                     fill={true}
@@ -72,7 +72,7 @@ export default function index() {
                 <motion.div style={{x: x2}} className={styles.slider}>
                     {
                         slider2.map( (project, index) => {
-                            return <div key={index} className={styles.project} style={{backgroundColor: project.color}} >
+                            return <div key={index} className={styles.project}  >
                                 <div key={index} className={styles.imageContainer}>
                                     <Image 
                                     fill={true}
