@@ -40,7 +40,7 @@ export default function Index() {
    
       </div>
       <Technical />
-      <Mask/>
+      {/* <Mask/> */}
       <Complements />
 
     </div>
