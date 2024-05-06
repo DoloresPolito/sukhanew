@@ -10,6 +10,7 @@ import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import Footer from "../sukhacomponents/Footer"
 
+
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,23 @@ export default function Home() {
     )()
   }, [])
 
+  const [width, setWidth] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
   return (
     <main className={styles.main}>
       <AnimatePresence mode='wait'>
@@ -37,7 +55,13 @@ export default function Home() {
       <Landing />
       <Description />
       {/* <Projects /> */}
-      <SlidingImages />
+
+   {width > 1000 ? (<>
+    <SlidingImages />
+   </>) : (<></>)}
+    
+  
+ 
       <Contact />
       <Footer/>
     </main>

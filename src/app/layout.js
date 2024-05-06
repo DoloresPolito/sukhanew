@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-      <body className={`${bebasneue.variable} ${barlowcondensed.variable} ${barlowsemicondensed.variable} font-sans`}>
+      <body className={`${bebasneue.variable} ${barlowcondensed.variable} ${barlowsemicondensed.variable} ${inter.variable} font-sans`}>
         <Header />
         {children}
       </body>

@@ -76,6 +76,10 @@ const ComplementsSection = styled.div`
   /* max-width: 1600px; */
   margin: 0 auto;
   margin-top: 50px;
+  @media screen and (max-width: 1000px) {
+  margin-bottom: 540px;
+  }
+
 `;
 
 const ComplementsContainer = styled.div`

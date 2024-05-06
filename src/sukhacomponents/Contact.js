@@ -259,6 +259,11 @@ const ContactSection = styled.div`
   max-width: 1600px;
   margin: 0 auto;
 
+  @media screen and (max-width: 1000px) {
+ margin-top: -100px;
+  }
+
+
   @media screen and (max-width: 740px) {
     height: 660px;
   }
