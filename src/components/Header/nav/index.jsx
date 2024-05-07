@@ -9,11 +9,11 @@ import Curve from "./Curve";
 const navItems = [
   {
     title: "HOME",
-    href: "technical",
+    href: "home",
   },
   {
     title: "QUIENES SOMOS",
-    href: "technical",
+    href: "about",
   },
   {
     title: "INFO",
@@ -29,9 +29,11 @@ const navItems = [
   },
 ];
 
-export default function Index() {
+export default function Index({setIsActive, isActive}) {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+
+
 
   return (
     <motion.div
@@ -55,6 +57,8 @@ export default function Index() {
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}
                 setSelectedIndicator={setSelectedIndicator}
+                setIsActive={setIsActive} 
+                
               ></Link>
             );
           })}

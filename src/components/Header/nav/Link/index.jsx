@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 import { slide, scale } from "../../animation";
 import { Link } from "react-scroll";
 
-export default function Index({ data, isActive, setSelectedIndicator }) {
+export default function Index({ data, isActive, setSelectedIndicator, setIsActive}) {
   const { title, href, index } = data;
+
+  const handleClose = () => {
+setIsActive(false)
+  }
 
   return (
     <motion.div
@@ -24,7 +28,7 @@ export default function Index({ data, isActive, setSelectedIndicator }) {
         animate={isActive ? "open" : "closed"}
         className={styles.indicator}
       ></motion.div>
-      <Link to={href} spy={true} smooth={true} offset={10} duration={800}>
+      <Link to={href} spy={true} smooth={true} offset={10} duration={800}  onClick={() => handleClose()}>
         {title}
       </Link>
       {/* <Link href={href}>{title}</Link> */}

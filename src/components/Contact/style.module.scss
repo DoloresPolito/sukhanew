@@ -7,10 +7,15 @@
     background-color: #6a6f58;
     position: relative;
     .body{
-        padding-top: 200px;
+      
         width: 100%;
         max-width: 1800px;
         background-color: #6a6f58;
+
+        @media screen and (max-width: 740px) {
+     
+            height:750px;
+        }
 
         .title{
             border-bottom: 1px solid rgb(134, 134, 134);

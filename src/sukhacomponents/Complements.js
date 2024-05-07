@@ -77,7 +77,7 @@ const ComplementsSection = styled.div`
   margin: 0 auto;
   margin-top: 50px;
   @media screen and (max-width: 1000px) {
-  margin-bottom: 540px;
+  margin-bottom: 40px;
   }
 
 `;
@@ -106,7 +106,7 @@ const ComplementsText = styled.p`
   color: #6a6f58;
   font-style: regular;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
   align-self: flex-start;
   margin-top: -30px;

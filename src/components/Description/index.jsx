@@ -11,6 +11,12 @@ export default function Index() {
     "Nos enfocamos en ofrecer a nuestros clientes una experiencia única, asegurándonos de que cada detalle esté cuidado para que su evento sea un éxito asegurado.";
   const description = useRef(null);
   const isInView = useInView(description);
+
+  const shouldBold = (word) => {
+    const boldWords = ["experiencia", "única,", "éxito", "asegurado."]; // Lista de palabras que deseas en negrita
+    return boldWords.includes(word);
+  };
+
   return (
     <div ref={description} className={styles.description} id="about">
   
@@ -25,7 +31,7 @@ export default function Index() {
                   animate={isInView ? "open" : "closed"}
                   key={index}
                 >
-                  {word}
+                 {shouldBold(word) ? <strong>{word}</strong> : word}
                 </motion.span>
               </span>
             );

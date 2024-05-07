@@ -217,13 +217,6 @@ const Formulario = () => {
         </>
       )}
 
-      {/* <Box>
-        <BoxText>
-          CONSULTÁ LA FECHA
-          <br /> DE TU EVENTO{" "}
-        </BoxText>
-        <Image src={calendar} alt="calendar" />
-      </Box> */}
     </ContactSection>
   );
 };
@@ -236,7 +229,6 @@ const RingContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
 
   div {
     height: 200px;
@@ -255,17 +247,19 @@ const RingContainer = styled.div`
 
 const ContactSection = styled.div`
   width: 100%;
-  height: 500px;
+  height: 600px;
   max-width: 1600px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 
-  @media screen and (max-width: 1000px) {
- margin-top: -100px;
-  }
+
+
 
 
   @media screen and (max-width: 740px) {
     height: 660px;
+   
   }
 `;
 
@@ -276,6 +270,13 @@ const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  @media screen and (max-width: 740px) {
+
+   top:50px
+  }
+
+
+
   @media screen and (max-width: 405px) {
     width: 100%;
   }
@@ -307,31 +308,9 @@ const MessageSentContainer = styled.div`
 
   }
 
-  /* @media screen and (max-width: 1040px) {
-    padding-left: 50px;
-  }
-
-  @media screen and (max-width: 405px) {
-    width: 100%;
-    padding-left: 0px;
-  }
-
-  div {
-    max-width: 500px;
-
-    @media screen and (max-width: 1040px) {
-      max-width: 350px;
-    }
-
-    @media screen and (max-width: 400px) {
-      max-width: 300px;
-      padding-left: 15px;
-    }
-  } */
 `;
 
 const ContactTitle = styled.h2`
- /* font-family: "Bebas Neue"; */
  font-family: var(--font-bebasneue);
   color: #6a6f58;
   font-weight: 400;
@@ -343,7 +322,6 @@ const ContactTitle = styled.h2`
 `;
 
 const ContactSubTitle = styled.h2`
- /* font-family: "Bebas Neue"; */
  font-family: var(--font-bebasneue);
   color: #6a6f58;
   font-weight: 400;
@@ -355,34 +333,7 @@ const ContactSubTitle = styled.h2`
   font-size: 19px;
 `;
 
-const Box = styled.div`
-  height: 410px !important;
-  width: 350px;
-  background-color: #e0dcc7;
-  position: relative;
-  top: -440px;
-  left: 830px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  @media screen and (max-width: 1200px) {
-    left: 670px;
-  }
-
-  @media screen and (max-width: 1040px) {
-    left: 650px;
-  }
-
-  @media screen and (max-width: 1000px) {
-    left: 570px;
-  }
-
-  @media screen and (max-width: 1000px) {
-    display: none;
-  }
-`;
 
 
 const FormContainer = styled.form`
@@ -390,16 +341,20 @@ const FormContainer = styled.form`
   flex-wrap: wrap;
   flex-direction: column;
   width: 500px;
-  padding: 30px 50px;
+  padding: 0px 50px;
   margin-left: 100px;
+
+
 
   @media screen and (max-width: 1000px) {
     margin-left: 10px;
   }
 
   @media screen and (max-width: 840px) {
-    padding: 30px 0px;
+    padding: 0px 0px;
   }
+
+    
 
   @media screen and (max-width: 600px) {
     margin-left: 14px;
@@ -446,6 +401,9 @@ const InputContainer = styled.div`
   width: 100%;
   position: relative;
 
+
+
+
   input {
     width: 100%;
     padding: 8px;
@@ -454,6 +412,8 @@ const InputContainer = styled.div`
     background-color: #6a6f58;
     /* outline: none; */
     color: white;
+
+    height: 30px;
   }
 
   .last {
@@ -466,8 +426,10 @@ const InputContainer = styled.div`
     font-family: var(--font-barlowcondensed);
     font-style: regular;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 10px;
+    letter-spacing: 1px;
+
   }
 
   input:focus {

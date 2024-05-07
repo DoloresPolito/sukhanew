@@ -83,7 +83,7 @@ export default function Index() {
                     to="about"
                     spy={true}
                     smooth={true}
-                    offset={10}
+                    offset={-60}
                     duration={800}
                   >
                     <p>QUIENES SOMOS</p>
@@ -179,7 +179,7 @@ export default function Index() {
                   </Rounded>
                 </div>
                 <AnimatePresence mode="wait">
-                  {isActive && <Nav />}
+                  {isActive && <Nav setIsActive={setIsActive} isActive={isActive}/>}
                 </AnimatePresence>
               </div>
             </div>
