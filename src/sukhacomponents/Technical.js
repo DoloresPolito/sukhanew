@@ -18,7 +18,7 @@ const Technical = () => {
             <Measures>
               <TitleDiv>
                 <TechnicalSubtitle>Medidas</TechnicalSubtitle>
-                <Line />
+                {/* <Line /> */}
               </TitleDiv>
 
               <TechnicalImages>
@@ -43,7 +43,7 @@ const Technical = () => {
             <Capacity>
               <TitleDiv>
               <TechnicalSubtitle>Capacidad</TechnicalSubtitle>
-              <Line/>
+              {/* <Line/> */}
               </TitleDiv>
             
               <TechnicalImages>
@@ -73,6 +73,7 @@ const TechnicalSection = styled.div`
   margin: 0 auto;
   /* max-width: 1600px; */
   margin-bottom: 50px;
+
 `;
 
 const TechnicalContainer = styled.div`
@@ -81,6 +82,10 @@ const TechnicalContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+
+  @media screen and (max-width: 870px) {
+width: 100%;
+  }
 `;
 
 const TechnicalTitle = styled.h2`
@@ -123,6 +128,11 @@ const Box = styled.div`
 
   justify-content: space-around;
   height: auto;
+
+
+  @media screen and (max-width: 870px) {
+width: 100%;
+  }
 `;
 
 const TechnicalImages = styled.div`
@@ -131,18 +141,24 @@ const TechnicalImages = styled.div`
   justify-content: space-between;
   flex-wrap: wrap !important;
   height: auto;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+
 
   img{
     height: 240px;
     width: 310px;
+
+    @media screen and (max-width: 670px) {
+width: 100%;
+height: auto;
+    }
   }
 
-  @media screen and (max-width: 670px) {
+  /* @media screen and (max-width: 670px) {
     flex-direction: column !important;
     justify-content: center;
     align-items: center;
-  }
+  } */
 `;
 
 const Measures = styled.div`
@@ -160,7 +176,7 @@ const Measures = styled.div`
     padding: 20px;
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 400px) {
     min-width: 300px;
     padding: 20px;
   }
@@ -181,7 +197,7 @@ const Capacity = styled.div`
     padding: 20px;
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 400px) {
     min-width: 300px;
     padding: 20px;
   }

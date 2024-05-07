@@ -30,14 +30,11 @@ const Footer = () => {
   return (
     <FooterSection>
       <FooterContainer>
-        <LeftColumn>
-          <Image src={logo} alt="logo" />
-
-         
-        </LeftColumn>
-
         {width > medium ? (
           <>
+            <LeftColumn>
+              <Image src={logo} alt="logo" />
+            </LeftColumn>
             <RightColumn>
               <div className="uno">
                 <FooterTitle>Contacto</FooterTitle>
@@ -76,7 +73,6 @@ const Footer = () => {
         ) : (
           <>
             <SingleRightColumn>
-           
               <FooterTitle>Contacto</FooterTitle>
 
               <a
@@ -102,9 +98,7 @@ const Footer = () => {
                 {/* <Image src={instagram} alt="instagram" /> */}
                 Sukha Tents
               </a>
-        
             </SingleRightColumn>
-            
           </>
         )}
       </FooterContainer>
@@ -128,6 +122,10 @@ const FooterContainer = styled.footer`
   align-items: center;
   margin: 0 auto;
   /* max-width: 1600px; */
+
+  @media screen and (max-width: 700px) {
+    justify-content: center;
+  }
 `;
 
 const LeftColumn = styled.div`
@@ -209,8 +207,7 @@ const SingleRightColumn = styled.div`
       font-size: 14px;
     }
   }
-
-`
+`;
 
 const CenterText = styled.div`
   flex: 1;
@@ -230,8 +227,8 @@ const CenterText = styled.div`
 `;
 
 const FooterNavText = styled.p`
- /* font-family: 'Barlow Semi Condensed', sans-serif; */
- font-family: var(--font-barlowsemicondensed);
+  /* font-family: 'Barlow Semi Condensed', sans-serif; */
+  font-family: var(--font-barlowsemicondensed);
   color: #6a6f58;
   font-style: regular;
   font-weight: 400;
@@ -246,7 +243,7 @@ const FooterNavText = styled.p`
 `;
 
 const FooterTitle = styled.h2`
-font-family: var(--font-barlowsemicondensed);
+  font-family: var(--font-barlowsemicondensed);
   color: #6a6f58;
   font-style: regular;
   font-weight: 400;

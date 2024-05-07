@@ -46,8 +46,8 @@ export default function Index() {
    
       </div>
       <Technical />
-      <Mask/>
-      <Complements />
+      <Mask/> 
+    <Complements />
 
     </div>
   );
