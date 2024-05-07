@@ -29,9 +29,9 @@ const navItems = [
   },
 ];
 
-export default function Index({setIsActive, isActive}) {
+export default function Index({setSelectedIndicator, selectedIndicator,closeMobileMenu}) {
+
   const pathname = usePathname();
-  const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
 
 
@@ -57,8 +57,9 @@ export default function Index({setIsActive, isActive}) {
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}
                 setSelectedIndicator={setSelectedIndicator}
-                setIsActive={setIsActive} 
-                
+   
+                closeMobileMenu={closeMobileMenu}
+
               ></Link>
             );
           })}

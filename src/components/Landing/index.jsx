@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <motion.main initial="initial" animate="enter" className={styles.landing} id="home">
       <Image
-        src="/images/home.jpg"
+        src={width > 700 ? "/images/home.jpg" : "/images/home-mobile.png" }
         fill={true}
         alt="background"
       />

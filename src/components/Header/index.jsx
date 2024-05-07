@@ -15,7 +15,11 @@ import Image from "next/image";
 export default function Index() {
   const header = useRef(null);
   const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const pathname = usePathname();
+  const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+
+
   const button = useRef(null);
 
   useEffect(() => {
@@ -63,6 +67,11 @@ export default function Index() {
     };
   }, []);
   const medium = 1200;
+
+  const closeMobileMenu = () => {
+    console.log("ENTRA A  closeMobileMenu")
+    setIsActive(!isActive); // Cierra la barra de navegación móvil estableciendo isActive en false
+  };
 
   return (
     <>
@@ -137,6 +146,7 @@ export default function Index() {
           </div>
           <div ref={button} className={styles.headerButtonContainer}>
             <Rounded
+         
               onClick={() => {
                 setIsActive(!isActive);
               }}
@@ -149,7 +159,15 @@ export default function Index() {
               ></div>
             </Rounded>
           </div>
-          <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
+          <AnimatePresence mode="wait">
+            {isActive && (
+              <Nav
+                setSelectedIndicator={setSelectedIndicator}
+                selectedIndicator={selectedIndicator}
+                closeMobileMenu={closeMobileMenu} 
+              />
+            )}
+          </AnimatePresence>
         </>
       ) : (
         <>
@@ -164,8 +182,12 @@ export default function Index() {
                   />
                 </div>
 
-                <div ref={button} className={styles.headerButtonContainerMobile}>
+                <div
+                  ref={button}
+                  className={styles.headerButtonContainerMobile}
+                >
                   <Rounded
+                    
                     onClick={() => {
                       setIsActive(!isActive);
                     }}
@@ -179,7 +201,13 @@ export default function Index() {
                   </Rounded>
                 </div>
                 <AnimatePresence mode="wait">
-                  {isActive && <Nav setIsActive={setIsActive} isActive={isActive}/>}
+                  {isActive && (
+                    <Nav
+                      setSelectedIndicator={setSelectedIndicator}
+                      selectedIndicator={selectedIndicator}
+                      closeMobileMenu={closeMobileMenu} 
+                    />
+                  )}
                 </AnimatePresence>
               </div>
             </div>
