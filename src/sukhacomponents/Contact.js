@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 // import { Title } from "../styles/styles";
-// import axios from "axios";
+import axios from "axios";
 import { ColorRing } from "react-loader-spinner";
 
 const Formulario = () => {
@@ -31,17 +31,17 @@ const Formulario = () => {
     e.preventDefault();
 
     setSending(true);
-    // try {
-    //   await axios.post("../api/send-email", formData);
-    //   // alert('Correo enviado correctamente.');
-    //   setSending(false);
-    //   setMessageSent(true);
-    // } catch (error) {
-    //   // alert("Error al enviar el correo.");
-    //   setSending(false);
-    //   setMessageError(true);
-    //   console.error(error);
-    // }
+    try {
+      await axios.post("../api/send-email", formData);
+      // alert('Correo enviado correctamente.');
+      setSending(false);
+      setMessageSent(true);
+    } catch (error) {
+      // alert("Error al enviar el correo.");
+      setSending(false);
+      setMessageError(true);
+      console.error(error);
+    }
   };
 
   return (
@@ -384,7 +384,8 @@ const InputContainer = styled.div`
     background-color: #6a6f58;
     /* outline: none; */
     color: white;
-
+letter-spacing: 0.7px;
+font-size: 14px;
     height: 30px;
   }
 
