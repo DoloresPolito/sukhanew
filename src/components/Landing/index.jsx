@@ -77,10 +77,11 @@ export default function Home() {
 
       {width > 800 && (
         <div className={styles.sliderContainer}>
-          <div ref={slider} className={styles.slider}>
-            <p ref={firstText}>sukha tents -</p>
-            <p ref={secondText}>sukha tents -</p>
-          </div>
+          {/* <div ref={slider} className={styles.slider}>
+            <p ref={firstText}>tenemos la carpa perfecta para vos -</p>
+            <p ref={secondText}>tenemos la carpa perfecta para vos -</p>
+       
+          </div> */}
         </div>
       )}
     </motion.main>

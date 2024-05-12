@@ -58,165 +58,157 @@ const Formulario = () => {
           </div>
         </MessageSentContainer>
       ) : (
-
-        
         <>
-        {messageError ? (<>
-        
-          <MessageSentContainer>
-          <div>
-            <ContactTitle>EL MENSAJE NO SE PUDO ENVIAR</ContactTitle>
-
-            <ContactSubTitle>
-              {" "}
-             POR FAVOR INTENTA MÁS TARDE
-            </ContactSubTitle>
-          </div>
-        </MessageSentContainer>
-        
-        
-        </>) : (<>
-        
-        
-          {sending ? (
+          {messageError ? (
             <>
-              <RingContainer>
+              <MessageSentContainer>
                 <div>
-                  <ColorRing
-                    visible={true}
-                    height="80"
-                    width="80"
-                    ariaLabel="blocks-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="blocks-wrapper"
-                    colors={[
-                      "#e15b64",
-                      "#f47e60",
-                      "#f8b26a",
-                      "#abbd81",
-                      "#849b87",
-                    ]}
-                  />
+                  <ContactTitle>EL MENSAJE NO SE PUDO ENVIAR</ContactTitle>
+
+                  <ContactSubTitle>
+                    {" "}
+                    POR FAVOR INTENTA MÁS TARDE
+                  </ContactSubTitle>
                 </div>
-              </RingContainer>
+              </MessageSentContainer>
             </>
           ) : (
             <>
-              <ContactContainer>
-                <FormContainer onSubmit={handleSubmit}>
-                  <ContactTitle>CONTACTO</ContactTitle>
-                  <Row>
-                    <Column>
-                      <InputContainer>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="Nombre y Apellido"
-                          value={formData.name}
-                          onChange={handleChange}
-                        />
-                      </InputContainer>
-                    </Column>
-                    <Column>
-                      <InputContainer>
-                        <input
-                          type="text"
-                          id="date"
-                          name="date"
-                          placeholder="Fecha del evento"
-                          value={formData.date}
-                          onChange={handleChange}
-                        />
-                      </InputContainer>
-                    </Column>
-                  </Row>
-                  <Row>
-                    <Column>
-                      <InputContainer>
-                        <input
-                          type="text"
-                          id="phone"
-                          name="phone"
-                          placeholder="Teléfono"
-                          value={formData.phone}
-                          onChange={handleChange}
-                        />
-                      </InputContainer>
-                    </Column>
-                    <Column>
-                      <InputContainer>
-                        <input
-                          type="text"
-                          id="place"
-                          name="place"
-                          placeholder="Lugar del evento"
-                          value={formData.place}
-                          onChange={handleChange}
-                        />
-                      </InputContainer>
-                    </Column>
-                  </Row>
+              {sending ? (
+                <>
+                  <RingContainer>
+                    <div>
+                      <ColorRing
+                        visible={true}
+                        height="80"
+                        width="80"
+                        ariaLabel="blocks-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="blocks-wrapper"
+                        colors={[
+                          "#e15b64",
+                          "#f47e60",
+                          "#f8b26a",
+                          "#abbd81",
+                          "#849b87",
+                        ]}
+                      />
+                    </div>
+                  </RingContainer>
+                </>
+              ) : (
+                <>
+                  <ContactContainer>
+                    <FormContainer onSubmit={handleSubmit}>
+                      <ContactTitle>CONTACTO</ContactTitle>
+                      <Row>
+                        <Column>
+                          <InputContainer>
+                            <input
+                              type="text"
+                              id="name"
+                              name="name"
+                              placeholder="Nombre y Apellido"
+                              value={formData.name}
+                              onChange={handleChange}
+                            />
+                          </InputContainer>
+                        </Column>
+                        <Column>
+                          <InputContainer>
+                            <input
+                              type="text"
+                              id="date"
+                              name="date"
+                              placeholder="Fecha del evento"
+                              value={formData.date}
+                              onChange={handleChange}
+                            />
+                          </InputContainer>
+                        </Column>
+                      </Row>
+                      <Row>
+                        <Column>
+                          <InputContainer>
+                            <input
+                              type="text"
+                              id="phone"
+                              name="phone"
+                              placeholder="Teléfono"
+                              value={formData.phone}
+                              onChange={handleChange}
+                            />
+                          </InputContainer>
+                        </Column>
+                        <Column>
+                          <InputContainer>
+                            <input
+                              type="text"
+                              id="place"
+                              name="place"
+                              placeholder="Lugar del evento"
+                              value={formData.place}
+                              onChange={handleChange}
+                            />
+                          </InputContainer>
+                        </Column>
+                      </Row>
 
-                  <Row>
-                    <Column>
-                      <InputContainer>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          placeholder="Email"
-                          value={formData.email}
-                          onChange={handleChange}
-                        />
-                      </InputContainer>
-                    </Column>
-                    <Column>
-                      <InputContainer>
-                        <input
-                          type="text"
-                          id="quantity"
-                          name="quantity"
-                          placeholder="Cantidad de personas"
-                          value={formData.quantity}
-                          onChange={handleChange}
-                        />
-                      </InputContainer>
-                    </Column>
-                  </Row>
+                      <Row>
+                        <Column>
+                          <InputContainer>
+                            <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              placeholder="Email"
+                              value={formData.email}
+                              onChange={handleChange}
+                            />
+                          </InputContainer>
+                        </Column>
+                        <Column>
+                          <InputContainer>
+                            <input
+                              type="text"
+                              id="quantity"
+                              name="quantity"
+                              placeholder="Cantidad de personas"
+                              value={formData.quantity}
+                              onChange={handleChange}
+                            />
+                          </InputContainer>
+                        </Column>
+                      </Row>
 
-                  <Row>
-                    <FullWidthColumn>
-                      <InputContainer>
-                        <input
-                          as="text"
-                          id="message"
-                          name="message"
-                          rows="4"
-                          placeholder="Mensaje"
-                          className="last"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                        />
-                      </InputContainer>
-                    </FullWidthColumn>
-                  </Row>
-                  <Row>
-                    <Button type="submit">ENVIAR</Button>
-                  </Row>
-                </FormContainer>
-              </ContactContainer>
+                      <Row>
+                        <FullWidthColumn>
+                          <InputContainer>
+                            <input
+                              as="text"
+                              id="message"
+                              name="message"
+                              rows="4"
+                              placeholder="Mensaje"
+                              className="last"
+                              value={formData.message}
+                              onChange={handleChange}
+                              required
+                            />
+                          </InputContainer>
+                        </FullWidthColumn>
+                      </Row>
+                      <Row>
+                        <Button type="submit">ENVIAR</Button>
+                      </Row>
+                    </FormContainer>
+                  </ContactContainer>
+                </>
+              )}
             </>
           )}
-        
-        
-        
-        </>)}
-         
         </>
       )}
-
     </ContactSection>
   );
 };
@@ -253,13 +245,8 @@ const ContactSection = styled.div`
   display: flex;
   align-items: center;
 
-
-
-
-
   @media screen and (max-width: 740px) {
     height: 660px;
-   
   }
 `;
 
@@ -270,12 +257,10 @@ const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+
   @media screen and (max-width: 740px) {
-
-   top:50px
+    top: 50px;
   }
-
-
 
   @media screen and (max-width: 405px) {
     width: 100%;
@@ -283,7 +268,7 @@ const ContactContainer = styled.div`
 `;
 
 const MessageSentContainer = styled.div`
-   width: 80%;
+  width: 80%;
   height: 460px;
   background-color: #6a6f58;
   display: flex;
@@ -297,7 +282,7 @@ const MessageSentContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  div{
+  div {
     max-width: 500px;
     height: 300px;
     margin-left: -200px;
@@ -305,13 +290,11 @@ const MessageSentContainer = styled.div`
     @media screen and (max-width: 1000px) {
       margin-left: 0px;
     }
-
   }
-
 `;
 
 const ContactTitle = styled.h2`
- font-family: var(--font-bebasneue);
+  font-family: var(--font-bebasneue);
   color: #6a6f58;
   font-weight: 400;
   line-height: 150%;
@@ -322,7 +305,7 @@ const ContactTitle = styled.h2`
 `;
 
 const ContactSubTitle = styled.h2`
- font-family: var(--font-bebasneue);
+  font-family: var(--font-bebasneue);
   color: #6a6f58;
   font-weight: 400;
   line-height: 150%;
@@ -333,9 +316,6 @@ const ContactSubTitle = styled.h2`
   font-size: 19px;
 `;
 
-
-
-
 const FormContainer = styled.form`
   display: flex;
   flex-wrap: wrap;
@@ -344,8 +324,6 @@ const FormContainer = styled.form`
   padding: 0px 50px;
   margin-left: 100px;
 
-
-
   @media screen and (max-width: 1000px) {
     margin-left: 10px;
   }
@@ -353,8 +331,6 @@ const FormContainer = styled.form`
   @media screen and (max-width: 840px) {
     padding: 0px 0px;
   }
-
-    
 
   @media screen and (max-width: 600px) {
     margin-left: 14px;
@@ -378,7 +354,6 @@ const Row = styled.div`
   }
 
   @media screen and (max-width: 434px) {
-
     width: 250px;
   }
 `;
@@ -400,9 +375,6 @@ const FullWidthColumn = styled.div`
 const InputContainer = styled.div`
   width: 100%;
   position: relative;
-
-
-
 
   input {
     width: 100%;
@@ -429,7 +401,6 @@ const InputContainer = styled.div`
     font-size: 16px;
     line-height: 10px;
     letter-spacing: 1px;
-
   }
 
   input:focus {
@@ -440,7 +411,7 @@ const InputContainer = styled.div`
     font-weight: 400;
     font-size: 14px;
     line-height: 10px;
-    outline: none; 
+    outline: none;
   }
 `;
 

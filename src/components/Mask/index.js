@@ -28,9 +28,8 @@ export default function Contact() {
               setIsHovered(false);
             }}
           >
-            Nuestro servicio de alquiler de carpas está diseñado para brindar la
-            mejor experiencia posible a nuestros clientes, asegurando una
-            solución completa.
+           Ofrecemos una <span>variedad de complementos</span> que pueden
+            personalizar su evento aún más, incluyendo fogoneros, luces y pisos.
           </p>
         </motion.div>
 

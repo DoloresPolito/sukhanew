@@ -3,7 +3,8 @@
     display: flex;
     height: 100vh;
     overflow-y: scroll !important;
-    overflow-x: hidden;
+
+
 
     img{
       object-fit: cover;
@@ -17,13 +18,15 @@
     .slider{
       position: relative;
       white-space: nowrap;
+      max-width: 1600px;
+      margin: 0 auto;
     }
     
     .slider p{
       position: relative;
       margin: 0px;
       color: #e0dcc7;
-      font-size: 240px;
+      font-size: 120px;
       font-weight: 500;
       padding-right: 50px;
       font-family: var(--font-barlowcondensed);

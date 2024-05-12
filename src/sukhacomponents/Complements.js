@@ -73,9 +73,10 @@ const ComplementsSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* max-width: 1600px; */
+  max-width: 1600px;
   margin: 0 auto;
   margin-top: 50px;
+
   @media screen and (max-width: 1000px) {
   margin-bottom: 40px;
   }

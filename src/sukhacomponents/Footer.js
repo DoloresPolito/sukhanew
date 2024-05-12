@@ -3,9 +3,9 @@ import styled from "styled-components";
 import logo from "../../public/images/logo.png";
 // import { Text } from "../styles/styles";
 import Image from "next/image";
-// import phone from "../../public/assets/icons/phone100.png";
-// import instagram from "../../public/assets/icons/instagram.png";
-// import email from "../../public/assets/icons/email.png";
+import phone from "../../public/icons/phone100.png";
+import instagram from "../../public/icons/instagram.png";
+import email from "../../public/icons/email.png";
 // import { Link } from "react-scroll";
 
 const Footer = () => {
@@ -44,13 +44,13 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {/* <Image src={phone} alt="phone" /> */}
+                  <Image src={phone} alt="phone" />
                   +543446584076
                 </a>
 
                 <a href="mailto:sukhatents@gmail.com">
                   {" "}
-                  {/* <Image src={email} alt="email" /> */}
+                  <Image src={email} alt="email" />
                   sukhatents@gmail.com
                 </a>
               </div>
@@ -63,7 +63,7 @@ const Footer = () => {
                   rel="noreferrer"
                 >
                   {" "}
-                  {/* <Image src={instagram} alt="instagram" /> */}
+                  <Image src={instagram} alt="instagram" />
                   Sukha Tents
                 </a>
               </div>
@@ -80,13 +80,13 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                {/* <Image src={phone} alt="phone" /> */}
+                <Image src={phone} alt="phone" />
                 +543446584076
               </a>
 
               <a href="mailto:sukhatents@gmail.com">
                 {" "}
-                {/* <Image src={email} alt="email" /> */}
+                <Image src={email} alt="email" />
                 sukhatents@gmail.com
               </a>
               <a
@@ -95,7 +95,7 @@ const Footer = () => {
                 rel="noreferrer"
               >
                 {" "}
-                {/* <Image src={instagram} alt="instagram" /> */}
+                <Image src={instagram} alt="instagram" />
                 Sukha Tents
               </a>
             </SingleRightColumn>
@@ -112,6 +112,8 @@ const FooterSection = styled.footer`
   display: flex;
   flex-direction: column;
   background-color: #e0dcc7;
+
+
 `;
 
 const FooterContainer = styled.footer`
@@ -121,7 +123,7 @@ const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   margin: 0 auto;
-  /* max-width: 1600px; */
+  max-width: 1600px;
 
   @media screen and (max-width: 700px) {
     justify-content: center;
@@ -149,8 +151,8 @@ const RightColumn = styled.div`
   flex: 2;
 
   img {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     padding-right: 10px;
 
     position: relative;

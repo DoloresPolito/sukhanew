@@ -19,7 +19,6 @@ export default function Index() {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
-
   const button = useRef(null);
 
   useEffect(() => {
@@ -69,8 +68,7 @@ export default function Index() {
   const medium = 1200;
 
   const closeMobileMenu = () => {
-    console.log("ENTRA A  closeMobileMenu")
-    setIsActive(!isActive); // Cierra la barra de navegación móvil estableciendo isActive en false
+    setIsActive(!isActive);
   };
 
   return (
@@ -78,75 +76,76 @@ export default function Index() {
       {width > medium ? (
         <>
           <div ref={header} className={styles.header}>
-            <div className={styles.logo}>
-              <Image
-                src={logo}
-                alt="logo"
-                style={{ height: "65px", width: "129px" }}
-              />
-            </div>
-            <div className={styles.nav}>
-              <Magnetic>
-                <div className={styles.el}>
-                  <Link
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={-60}
-                    duration={800}
-                  >
-                    <p>QUIENES SOMOS</p>
-                  </Link>
-                  <div className={styles.indicator}></div>
-                </div>
-              </Magnetic>
-              <Magnetic>
-                <div className={styles.el}>
-                  <Link
-                    to="technical"
-                    spy={true}
-                    smooth={true}
-                    offset={10}
-                    duration={800}
-                  >
-                    <p>INFO</p>
-                  </Link>
-                  <div className={styles.indicator}></div>
-                </div>
-              </Magnetic>
-              <Magnetic>
-                <div className={styles.el}>
-                  <Link
-                    to="complements"
-                    spy={true}
-                    smooth={true}
-                    offset={10}
-                    duration={800}
-                  >
-                    <p>COMPLEMENTOS</p>
-                  </Link>
-                  <div className={styles.indicator}></div>
-                </div>
-              </Magnetic>
-              <Magnetic>
-                <div className={styles.el}>
-                  <Link
-                    to="contacto"
-                    spy={true}
-                    smooth={true}
-                    offset={600}
-                    duration={800}
-                  >
-                    <p>CONTACTO</p>
-                  </Link>
-                  <div className={styles.indicator}></div>
-                </div>
-              </Magnetic>
+            <div className={styles.container}>
+              <div className={styles.logo}>
+                <Image
+                  src={logo}
+                  alt="logo"
+                  style={{ height: "65px", width: "129px" }}
+                />
+              </div>
+              <div className={styles.nav}>
+                <Magnetic>
+                  <div className={styles.el}>
+                    <Link
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={-60}
+                      duration={800}
+                    >
+                      <p>QUIENES SOMOS</p>
+                    </Link>
+                    <div className={styles.indicator}></div>
+                  </div>
+                </Magnetic>
+                <Magnetic>
+                  <div className={styles.el}>
+                    <Link
+                      to="technical"
+                      spy={true}
+                      smooth={true}
+                      offset={10}
+                      duration={800}
+                    >
+                      <p>INFO</p>
+                    </Link>
+                    <div className={styles.indicator}></div>
+                  </div>
+                </Magnetic>
+                <Magnetic>
+                  <div className={styles.el}>
+                    <Link
+                      to="complements"
+                      spy={true}
+                      smooth={true}
+                      offset={10}
+                      duration={800}
+                    >
+                      <p>COMPLEMENTOS</p>
+                    </Link>
+                    <div className={styles.indicator}></div>
+                  </div>
+                </Magnetic>
+                <Magnetic>
+                  <div className={styles.el}>
+                    <Link
+                      to="contacto"
+                      spy={true}
+                      smooth={true}
+                      offset={600}
+                      duration={800}
+                    >
+                      <p>CONTACTO</p>
+                    </Link>
+                    <div className={styles.indicator}></div>
+                  </div>
+                </Magnetic>
+              </div>
             </div>
           </div>
           <div ref={button} className={styles.headerButtonContainer}>
             <Rounded
-         
               onClick={() => {
                 setIsActive(!isActive);
               }}
@@ -164,7 +163,7 @@ export default function Index() {
               <Nav
                 setSelectedIndicator={setSelectedIndicator}
                 selectedIndicator={selectedIndicator}
-                closeMobileMenu={closeMobileMenu} 
+                closeMobileMenu={closeMobileMenu}
               />
             )}
           </AnimatePresence>
@@ -187,7 +186,6 @@ export default function Index() {
                   className={styles.headerButtonContainerMobile}
                 >
                   <Rounded
-                    
                     onClick={() => {
                       setIsActive(!isActive);
                     }}
@@ -205,7 +203,7 @@ export default function Index() {
                     <Nav
                       setSelectedIndicator={setSelectedIndicator}
                       selectedIndicator={selectedIndicator}
-                      closeMobileMenu={closeMobileMenu} 
+                      closeMobileMenu={closeMobileMenu}
                     />
                   )}
                 </AnimatePresence>
