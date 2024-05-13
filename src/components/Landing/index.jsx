@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import styles from './style.module.scss';
 import { useRef, useEffect, useState } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+import gsap from '../../../node_modules/gsap';
+import { ScrollTrigger } from "../../../node_modules/gsap/ScrollTrigger";
 import { motion } from 'framer-motion';
 
 export default function Home() {

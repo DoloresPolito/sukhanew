@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useRef } from 'react';
 import styles from './style.module.scss';
-import gsap from 'gsap';
+import gsap from '../../../node_modules/gsap';
 import Magnetic from '../Magnetic';
 
 export default function Index({children, backgroundColor="#838970", ...attributes}) {

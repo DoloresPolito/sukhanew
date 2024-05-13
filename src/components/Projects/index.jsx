@@ -3,7 +3,7 @@ import styles from './style.module.scss'
 import { useState, useEffect, useRef } from 'react';
 import Project from './components/project';
 import { motion } from 'framer-motion';
-import gsap from 'gsap';
+import gsap from '../../../node_modules/gsap';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 

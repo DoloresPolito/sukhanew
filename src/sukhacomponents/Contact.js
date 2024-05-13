@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 // import { Title } from "../styles/styles";
 import axios from "axios";
-import { ColorRing } from "react-loader-spinner";
+
 
 const Formulario = () => {
   const [messageSent, setMessageSent] = useState(false);
@@ -32,21 +32,22 @@ const Formulario = () => {
 
     setSending(true);
     try {
-      await axios.post("../api/send-email", formData);
-      // alert('Correo enviado correctamente.');
+      await axios.post("/api/send-email", formData);
       setSending(false);
       setMessageSent(true);
     } catch (error) {
-      // alert("Error al enviar el correo.");
+      console.log("error", error)
       setSending(false);
       setMessageError(true);
       console.error(error);
     }
   };
 
+  
+
   return (
     <ContactSection id="contact">
-      {messageSent ? (
+      {/* {messageSent ? (
         <MessageSentContainer>
           <div>
             <ContactTitle>MUCHAS GRACIAS POR TU MENSAJE</ContactTitle>
@@ -98,117 +99,121 @@ const Formulario = () => {
                 </>
               ) : (
                 <>
-                  <ContactContainer>
-                    <FormContainer onSubmit={handleSubmit}>
-                      <ContactTitle>CONTACTO</ContactTitle>
-                      <Row>
-                        <Column>
-                          <InputContainer>
-                            <input
-                              type="text"
-                              id="name"
-                              name="name"
-                              placeholder="Nombre y Apellido"
-                              value={formData.name}
-                              onChange={handleChange}
-                            />
-                          </InputContainer>
-                        </Column>
-                        <Column>
-                          <InputContainer>
-                            <input
-                              type="text"
-                              id="date"
-                              name="date"
-                              placeholder="Fecha del evento"
-                              value={formData.date}
-                              onChange={handleChange}
-                            />
-                          </InputContainer>
-                        </Column>
-                      </Row>
-                      <Row>
-                        <Column>
-                          <InputContainer>
-                            <input
-                              type="text"
-                              id="phone"
-                              name="phone"
-                              placeholder="Teléfono"
-                              value={formData.phone}
-                              onChange={handleChange}
-                            />
-                          </InputContainer>
-                        </Column>
-                        <Column>
-                          <InputContainer>
-                            <input
-                              type="text"
-                              id="place"
-                              name="place"
-                              placeholder="Lugar del evento"
-                              value={formData.place}
-                              onChange={handleChange}
-                            />
-                          </InputContainer>
-                        </Column>
-                      </Row>
-
-                      <Row>
-                        <Column>
-                          <InputContainer>
-                            <input
-                              type="email"
-                              id="email"
-                              name="email"
-                              placeholder="Email"
-                              value={formData.email}
-                              onChange={handleChange}
-                            />
-                          </InputContainer>
-                        </Column>
-                        <Column>
-                          <InputContainer>
-                            <input
-                              type="text"
-                              id="quantity"
-                              name="quantity"
-                              placeholder="Cantidad de personas"
-                              value={formData.quantity}
-                              onChange={handleChange}
-                            />
-                          </InputContainer>
-                        </Column>
-                      </Row>
-
-                      <Row>
-                        <FullWidthColumn>
-                          <InputContainer>
-                            <input
-                              as="text"
-                              id="message"
-                              name="message"
-                              rows="4"
-                              placeholder="Mensaje"
-                              className="last"
-                              value={formData.message}
-                              onChange={handleChange}
-                              required
-                            />
-                          </InputContainer>
-                        </FullWidthColumn>
-                      </Row>
-                      <Row>
-                        <Button type="submit">ENVIAR</Button>
-                      </Row>
-                    </FormContainer>
-                  </ContactContainer>
+                  
                 </>
               )}
             </>
           )}
         </>
-      )}
+      )} */}
+
+      <ContactContainer>
+        <FormContainer onSubmit={handleSubmit}>
+          <ContactTitle>CONTACTO</ContactTitle>
+          <Row>
+            <Column>
+              <InputContainer>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre y Apellido"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </InputContainer>
+            </Column>
+            <Column>
+              <InputContainer>
+                <input
+                  type="text"
+                  id="date"
+                  name="date"
+                  placeholder="Fecha del evento"
+                  value={formData.date}
+                  onChange={handleChange}
+                />
+              </InputContainer>
+            </Column>
+          </Row>
+          <Row>
+            <Column>
+              <InputContainer>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="Teléfono"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+              </InputContainer>
+            </Column>
+            <Column>
+              <InputContainer>
+                <input
+                  type="text"
+                  id="place"
+                  name="place"
+                  placeholder="Lugar del evento"
+                  value={formData.place}
+                  onChange={handleChange}
+                />
+              </InputContainer>
+            </Column>
+          </Row>
+
+          <Row>
+            <Column>
+              <InputContainer>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </InputContainer>
+            </Column>
+            <Column>
+              <InputContainer>
+                <input
+                  type="text"
+                  id="quantity"
+                  name="quantity"
+                  placeholder="Cantidad de personas"
+                  value={formData.quantity}
+                  onChange={handleChange}
+                />
+              </InputContainer>
+            </Column>
+          </Row>
+
+          <Row>
+            <FullWidthColumn>
+              <InputContainer>
+                <input
+                  as="text"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Mensaje"
+                  className="last"
+                  value={formData.message}
+                  onChange={handleChange}
+                  // required
+                />
+              </InputContainer>
+            </FullWidthColumn>
+          </Row>
+          <Row>
+            <Button type="submit" >
+              ENVIAR
+            </Button>
+          </Row>
+        </FormContainer>
+      </ContactContainer>
     </ContactSection>
   );
 };
@@ -384,8 +389,8 @@ const InputContainer = styled.div`
     background-color: #6a6f58;
     /* outline: none; */
     color: white;
-letter-spacing: 0.7px;
-font-size: 14px;
+    letter-spacing: 0.7px;
+    font-size: 14px;
     height: 30px;
   }
 
