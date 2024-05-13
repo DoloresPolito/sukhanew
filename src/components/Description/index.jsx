@@ -45,9 +45,9 @@ export default function Index() {
         </p>
    
       </div>
-      {/* <Technical />
+      <Technical />
       <Mask/> 
-    <Complements /> */}
+    <Complements />
 
     </div>
   );

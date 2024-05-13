@@ -8,7 +8,7 @@ import Description from "../components/Description";
 import SlidingImages from "../components/SlidingImages";
 import Contact from "../components/Contact";
 import Footer from "../sukhacomponents/Footer";
-
+import NewContact from "../sukhacomponents/NewContact"
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -57,7 +57,7 @@ export default function Home() {
         <></>
       )}
 
-      <Contact />
+      <NewContact />
       <Footer />
     </main>
   );

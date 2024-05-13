@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <FooterSection>
       <FooterContainer>
-        {width > medium ? (
+        {/* {width > medium ? (
           <>
             <LeftColumn>
               <Image src={logo} alt="logo" />
@@ -67,7 +67,7 @@ const Footer = () => {
                   Sukha Tents
                 </a>
               </div>
-              {/* Contenido de la segunda columna derecha */}
+      
             </RightColumn>
           </>
         ) : (
@@ -100,9 +100,9 @@ const Footer = () => {
               </a>
             </SingleRightColumn>
           </>
-        )}
+        )} */}
       </FooterContainer>
-
+<CenterText>          <Image src={logo} alt="logo" /></CenterText>
       <CenterText>Sukha Tents 2023 | Todos los derechos reservados</CenterText>
     </FooterSection>
   );
@@ -122,8 +122,10 @@ const FooterContainer = styled.footer`
   padding: 20px;
   display: flex;
   align-items: center;
+
   margin: 0 auto;
   max-width: 1600px;
+  height: 60px;
 
   @media screen and (max-width: 700px) {
     justify-content: center;
@@ -222,6 +224,11 @@ const CenterText = styled.div`
   line-height: 40px;
   letter-spacing: 0.5px;
   color: #6a6f58;
+
+  img {
+    height: 90px;
+    width: auto;
+  }
 
   @media screen and (max-width: 600px) {
     font-size: 18px;
